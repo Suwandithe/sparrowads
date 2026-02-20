@@ -3,20 +3,20 @@ import { OpenRouter } from '@openrouter/sdk'
 
 const DEFAULT_MODEL = 'openrouter/aurora-alpha'
 
-const SYSTEM_PROMPT = `You are a helpful assistant for Sparrow Advertising, an event organizer company in Indonesia. You answer questions about their services in a friendly, professional way.
+const SYSTEM_PROMPT = `You are a helpful assistant for Sparrow Advertising, an event organizer company. You answer questions about their services in a friendly, professional way.
 
 About Sparrow Advertising:
 - Full-service event organizer for brands, agencies, and institutions.
-- Services: Concept development (Konsep), Production (Produksi), and Operational management (Operasional).
+- Services: Concept development, Production, and Operational management.
 - They deliver strategic, impactful events from concept to on-ground execution.
 - Contact: +62 85883144435, arun@sparrowads.id, Wisma IWI, Lantai 2 Unit 3A, Jl. Arjuna Sel. No.75 2, Kb. Jeruk.
 
-Keep answers concise and relevant. For detailed requests (proposals, quotes), suggest they contact via WhatsApp or email. Respond in the same language the user uses (Indonesian or English).`
+Keep answers concise and relevant. For detailed requests (proposals, quotes), suggest they contact via WhatsApp or email. Respond in English.`
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { role: 'assistant', content: 'Halo! Saya asisten Sparrow Advertising. Ada yang bisa saya bantu tentang layanan event organizer kami?' }
+    { role: 'assistant', content: "Hi! I'm the Sparrow Advertising assistant. How can I help you with our event organizer services?" }
   ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -26,7 +26,7 @@ export default function ChatBot() {
   const inputRef = useRef(null)
 
   const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY
-  const model = import.meta.env.VITE_OPENROUTER_MODEL || DEFAULT_MODEL
+  const model = import.meta.env.VITE_OPENROUTER_MODEL 
 
   const scrollToBottom = () => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   useEffect(() => { scrollToBottom() }, [messages, streamingContent])
@@ -81,12 +81,12 @@ export default function ChatBot() {
         }
       }
 
-      setMessages((prev) => [...prev, { role: 'assistant', content: response || 'Maaf, tidak ada respons.' }])
+      setMessages((prev) => [...prev, { role: 'assistant', content: response || 'Sorry, no response.' }])
       setStreamingContent('')
     } catch (err) {
       setMessages((prev) => [...prev, {
         role: 'assistant',
-        content: `Terjadi kesalahan: ${err.message}. Pastikan VITE_OPENROUTER_API_KEY di .env sudah benar.`
+        content: `An error occurred: ${err.message}. Make sure VITE_OPENROUTER_API_KEY in .env is set correctly.`
       }])
       setStreamingContent('')
       setError(err.message)
@@ -179,7 +179,7 @@ export default function ChatBot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Ketik pesan..."
+              placeholder="Type a message..."
               className="flex-1 rounded-xl bg-sparrow-slate border border-sparrow-gold/20 px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-sparrow-gold/50"
               disabled={loading}
             />
@@ -189,7 +189,7 @@ export default function ChatBot() {
               disabled={loading || !input.trim()}
               className="rounded-xl bg-sparrow-gold px-4 py-3 text-sparrow-dark font-medium text-sm hover:bg-amber-500 disabled:opacity-50 disabled:pointer-events-none transition-opacity"
             >
-              Kirim
+              Send
             </button>
           </div>
         </div>

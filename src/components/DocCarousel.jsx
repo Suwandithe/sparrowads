@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 
-// Placeholder documentation items – replace with real event titles/images as needed
 const docItems = [
-  { id: 1, title: 'Event Dokumentasi 1', subtitle: 'Corporate Event', color: 'from-amber-900/40 to-transparent' },
-  { id: 2, title: 'Event Dokumentasi 2', subtitle: 'Product Launch', color: 'from-amber-800/30 to-transparent' },
-  { id: 3, title: 'Event Dokumentasi 3', subtitle: 'Brand Activation', color: 'from-amber-700/20 to-transparent' },
-  { id: 4, title: 'Event Dokumentasi 4', subtitle: 'Conference', color: 'from-amber-900/40 to-transparent' },
-  { id: 5, title: 'Event Dokumentasi 5', subtitle: 'Exhibition', color: 'from-amber-800/30 to-transparent' },
+  { id: 1, title: 'Enervon Nusantara Run', subtitle: 'Brand Activation', image: '/enervon.png' },
+  { id: 2, title: 'Event Documentation 2', subtitle: 'Product Launch', image: '/enervon.png' },
+  { id: 3, title: 'Event Documentation 3', subtitle: 'Brand Activation', image: '/enervon.png' },
+  { id: 4, title: 'Event Documentation 4', subtitle: 'Conference', image: '/enervon.png' },
+  { id: 5, title: 'Event Documentation 5', subtitle: 'Exhibition', image: '/enervon.png' },
 ]
 
 const CARD_GAP = 24
@@ -42,13 +41,13 @@ export default function DocCarousel() {
   const offset = -index * (CARD_WIDTH + CARD_GAP)
 
   return (
-    <section id="dokumentasi" className="py-24">
+    <section id="dokumentasi" className="py-24 border-b border-white/50">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Dokumentasi Acara
+          Event Documentation
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Portofolio acara yang telah kami selenggarakan.
+          Portfolio of events we have delivered.
         </p>
 
         <div className="relative max-w-[min(100%,320px)] md:max-w-[calc(320px*3+24px*2)] mx-auto">
@@ -67,12 +66,16 @@ export default function DocCarousel() {
                   key={item.id}
                   className="flex-shrink-0 w-[280px] md:w-[320px] rounded-2xl overflow-hidden bg-sparrow-slate border border-sparrow-gold/20 hover:border-sparrow-gold/50 transition-colors"
                 >
-                  <div
-                    className={`aspect-[4/3] bg-gradient-to-b ${item.color} bg-sparrow-charcoal flex items-center justify-center`}
-                  >
-                    <div className="text-center p-4">
-                      <p className="text-sparrow-gold font-semibold">{item.subtitle}</p>
-                      <p className="text-white/90 text-lg font-medium mt-1">{item.title}</p>
+                  <div className="aspect-[4/3] relative bg-sparrow-charcoal overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+                      <p className="text-sparrow-gold font-semibold text-sm">{item.subtitle}</p>
+                      <p className="text-white font-medium mt-0.5">{item.title}</p>
                     </div>
                   </div>
                   <div className="p-4">

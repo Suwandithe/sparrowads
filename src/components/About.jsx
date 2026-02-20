@@ -1,17 +1,17 @@
 export default function About() {
   return (
-    <section id="tentang-kami" className="py-24">
+    <section id="tentang-kami" className="py-24 border-b border-white/10">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-sparrow-gold">
-              Tentang Kami
+              About Us
             </h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Kami adalah event organizer full-service yang menghadirkan acara yang strategis, berdampak, dan dieksekusi dengan baik untuk brand, agensi, dan institusi.
+              We are a full-service event organizer delivering strategic, impactful, and well-executed events for brands, agencies, and institutions.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Dari pengembangan konsep hingga eksekusi di lapangan, kami memastikan setiap detail selaras dengan tujuan, keterlibatan audiens, dan hasil yang terukur.
+              From concept development to on-ground execution, we ensure every detail aligns with your goals, audience engagement, and measurable results.
             </p>
             <p className="mt-12 text-sparrow-gold/80 font-medium tracking-widest text-sm">
               Sparrow Advertising
@@ -20,7 +20,7 @@ export default function About() {
           <div className="relative order-first md:order-last">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-sparrow-gold/20 bg-sparrow-charcoal">
               <img
-                src="/image/<test>.png"
+                src="/about_images.jpg"
                 alt="Sparrow Advertising - Event Organizer"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -29,7 +29,7 @@ export default function About() {
                 }}
               />
               <div className="hidden w-full h-full bg-gradient-to-br from-sparrow-gold/20 to-sparrow-slate flex items-center justify-center">
-                <span className="text-sparrow-gold/60 text-sm">Tentang Kami</span>
+                <span className="text-sparrow-gold/60 text-sm">About Us</span>
               </div>
             </div>
           </div>

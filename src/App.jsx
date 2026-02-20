@@ -1,10 +1,10 @@
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import Legalitas from './components/Legalitas'
 import About from './components/About'
 import Mission from './components/Mission'
 import ServiceScope from './components/ServiceScope'
 import Services from './components/Services'
+import Clients from './components/Clients'
 import DocCarousel from './components/DocCarousel'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -19,11 +19,11 @@ export default function App() {
       <ChatBot />
       <main>
         <Hero />
-        <Legalitas />
         <About />
         <Mission />
         <ServiceScope />
         <Services />
+        <Clients />
         <DocCarousel />
         <Contact />
         <Footer />

@@ -1,11 +1,10 @@
 const links = [
   { href: '#hero', label: 'Home' },
-  { href: '#legalitas', label: 'Legalitas' },
-  { href: '#tentang-kami', label: 'Tentang Kami' },
-  { href: '#misi', label: 'Misi' },
+  { href: '#tentang-kami', label: 'About Us' },
+  { href: '#misi', label: 'Mission' },
   { href: '#cakupan-layanan', label: 'Service' },
-  { href: '#dokumentasi', label: 'Dokumentasi' },
-  { href: '#kontak', label: 'Kontak' },
+  { href: '#dokumentasi', label: 'Documentation' },
+  { href: '#kontak', label: 'Contact' },
 ]
 
 export default function Nav() {
@@ -13,8 +12,15 @@ export default function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-sparrow-dark/90 backdrop-blur-md border-b border-sparrow-gold/10">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#hero" className="text-sparrow-gold font-bold tracking-wider text-lg">
-            Sparrow Advertising
+          <a href="#hero" className="flex items-center gap-2">
+            <img
+              src="/logo-removebg-preview.png"
+              alt=""
+              className="h-11 md:h-14 w-auto object-contain"
+            />
+            <span className="text-sparrow-gold font-bold tracking-wider text-lg">
+              Sparrow Advertising
+            </span>
           </a>
           <ul className="hidden md:flex items-center gap-8">
             {links.map((link) => (
