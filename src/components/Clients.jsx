@@ -6,11 +6,13 @@ const clients = [
   { name: "McDonald's", logo: '/clients/mcd.png' },
   { name: 'ids international design school', logo: '/clients/ids.png' },
   { name: 'CARRO', logo: '/clients/carro.png' },
-  { name: 'Orange', logo: '/clients/bountyMedia.png' },
+  { name: 'Bounty Media', logo: '/clients/bountyMedia.png' },
   { name: 'Jago', logo: '/clients/jago.png' },
   { name: 'Andalan', logo: '/clients/andalan.png' },
   { name: '99.co', logo: '/clients/99.png' },
   { name: 'TCL', logo: '/clients/TCL.png' },
+  { name: 'Enervon', logo: '/clients/enervon.jpeg' },
+  { name: 'Baygon', logo: '/clients/baygon.png' },
 ]
 
 export default function Clients() {

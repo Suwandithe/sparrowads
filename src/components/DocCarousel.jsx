@@ -43,7 +43,7 @@ export default function DocCarousel() {
   return (
     <section id="dokumentasi" className="py-24 border-b border-white/50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-sparrow-gold mb-4">
           Event Documentation
         </h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
