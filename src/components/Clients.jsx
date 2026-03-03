@@ -1,5 +1,5 @@
 const clients = [
-  { name: 'Tokocrypto', logo: '/clients/tokocrypto.png', large: true },
+  { name: 'Tokocrypto', logo: '/clients/tokocrypto.png', large: true},
   { name: 'Sutra', logo: '/clients/Sutra.png' },
   { name: 'Ruckus', logo: '/clients/ruckus.png' },
   { name: 'MPL', logo: '/clients/MPL.png' },
@@ -7,12 +7,12 @@ const clients = [
   { name: 'ids international design school', logo: '/clients/ids.png' },
   { name: 'CARRO', logo: '/clients/carro.png' },
   { name: 'Bounty Media', logo: '/clients/bountyMedia.png' },
-  { name: 'Jago', logo: '/clients/jago.png' },
-  { name: 'Andalan', logo: '/clients/andalan.png' },
-  { name: '99.co', logo: '/clients/99.png', large: true },
+  { name: 'Jago', logo: '/clients/jago.png', large: true , xlarge: true},
+  { name: 'Andalan', logo: '/clients/andalan.png'},
+  { name: '99.co', logo: '/clients/99.png', large: true, xlarge: true },
   { name: 'TCL', logo: '/clients/TCL.png' },
   { name: 'Enervon', logo: '/clients/enervon.jpeg' },
-  { name: 'Baygon', logo: '/clients/baygon.png', large: true },
+  { name: 'Baygon', logo: '/clients/baygon.png', large: true, xlarge: true },
 ]
 
 export default function Clients() {
@@ -32,7 +32,7 @@ export default function Clients() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className={`w-full object-contain object-center ${client.large ? 'max-h-20 max-w-[200px]' : 'max-h-12 max-w-[140px]'}`}
+                  className={`w-full object-contain object-center ${client.xlarge ? 'max-h-28 max-w-[260px]' : client.large ? 'max-h-20 max-w-[200px]' : 'max-h-12 max-w-[140px]'}`}
                 />
               ) : (
                 <span className="text-gray-600 text-sm font-medium text-center leading-tight">
