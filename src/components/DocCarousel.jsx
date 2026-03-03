@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react'
 
 const docItems = [
-  { id: 1, title: 'Enervon Nusantara Run', subtitle: 'Brand Activation', image: '/enervon.png' },
-  { id: 2, title: 'Event Documentation 2', subtitle: 'Product Launch', image: '/enervon.png' },
-  { id: 3, title: 'Event Documentation 3', subtitle: 'Brand Activation', image: '/enervon.png' },
-  { id: 4, title: 'Event Documentation 4', subtitle: 'Conference', image: '/enervon.png' },
-  { id: 5, title: 'Event Documentation 5', subtitle: 'Exhibition', image: '/enervon.png' },
+  { id: 1, title: 'Enervon Nusantara Run', subtitle: 'EnervonRunning Event', image: '/enervon.png' },
+  { id: 2, title: 'Baygon Event', subtitle: 'Brand Activation', image: '/baygonEvent1.jpeg' },
+  { id: 3, title: 'Baygon Event', subtitle: 'Brand Activation', image: '/baygonEvent2.jpeg' },
+  { id: 4, title: 'Event Documentation', subtitle: 'Corporate Event', image: '/documentation.jpeg' },
+  { id: 5, title: 'Festival Lagu Nusantara', subtitle: 'Cultural Festival', image: '/festivalNusantara.jpeg' },
+  { id: 6, title: 'Enervon Nusantara Run', subtitle: 'Enervon Running Event', image: '/enervonEvent1.jpeg' },
+  { id: 7, title: 'Enervon Nusantara Run', subtitle: 'Enervon Running Event', image: '/enervonEvent2.jpeg' },
+  { id: 8, title: 'Enervon Nusantara Run', subtitle: 'Enervon Running Event', image: '/enervonEvent3.jpeg' },
+  { id: 9, title: 'Enervon Nusantara Run', subtitle: 'Enervon Running Event', image: '/enervonEvent4.jpeg' },
+  { id: 10, title: 'Enervon Nusantara Run', subtitle: 'Enervon Running Event', image: '/enervonEvent5.jpeg' },
+  { id: 11, title: 'Enervon Nusantara Run', subtitle: 'Enervon Running Event', image: '/enervonEvent6.jpeg' },
 ]
 
 const CARD_GAP = 24
