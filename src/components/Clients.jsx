@@ -1,18 +1,18 @@
 const clients = [
-  { name: 'Tokocrypto', logo: '/clients/tokocrypto.png' },
+  { name: 'Tokocrypto', logo: '/clients/tokocrypto.png', large: true },
   { name: 'Sutra', logo: '/clients/Sutra.png' },
   { name: 'Ruckus', logo: '/clients/ruckus.png' },
   { name: 'MPL', logo: '/clients/MPL.png' },
-  { name: "McDonald's", logo: '/clients/mcd.png' },
+  { name: "McDonald's", logo: '/clients/mcd.png', large: true },
   { name: 'ids international design school', logo: '/clients/ids.png' },
   { name: 'CARRO', logo: '/clients/carro.png' },
   { name: 'Bounty Media', logo: '/clients/bountyMedia.png' },
   { name: 'Jago', logo: '/clients/jago.png' },
   { name: 'Andalan', logo: '/clients/andalan.png' },
-  { name: '99.co', logo: '/clients/99.png' },
+  { name: '99.co', logo: '/clients/99.png', large: true },
   { name: 'TCL', logo: '/clients/TCL.png' },
   { name: 'Enervon', logo: '/clients/enervon.jpeg' },
-  { name: 'Baygon', logo: '/clients/baygon.png' },
+  { name: 'Baygon', logo: '/clients/baygon.png', large: true },
 ]
 
 export default function Clients() {
@@ -32,7 +32,7 @@ export default function Clients() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="max-h-12 w-full max-w-[140px] object-contain object-center"
+                  className={`w-full object-contain object-center ${client.large ? 'max-h-20 max-w-[200px]' : 'max-h-12 max-w-[140px]'}`}
                 />
               ) : (
                 <span className="text-gray-600 text-sm font-medium text-center leading-tight">
